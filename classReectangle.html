@@ -12,6 +12,11 @@
         function randomHex() {
             return Math.floor(Math.random()*255);
         }
+
+        function randomR() {
+            return Math.floor(Math.random()*200);
+        }
+
         function randomColor() {
             var red = randomHex();
             var green = randomHex();
@@ -32,9 +37,9 @@
                 ctx.fill();
             }
         }
-        var a = new Rectangle(300,200);
-        document.getElementById("result").innerHTML= "Diện tích hính chữ nhật này là "+a.acreage+"<br>"+"Chu vi hình chữ nhật này là "+a.perimeter;
-        a.canvas();
+        var Rec = new Rectangle(300,randomR());
+        document.getElementById("result").innerHTML= "Diện tích hính chữ nhật này là "+Rec.acreage+"<br>"+"Chu vi hình chữ nhật này là "+Rec.perimeter;
+        Rec.canvas();
     </script>
 </body>
 </html>
